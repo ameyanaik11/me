@@ -15,4 +15,5 @@ export default {
     },
   },
   plugins: [],
+  darkMode: ["class", 'html[class~="dark"]'],
 } satisfies Config;
