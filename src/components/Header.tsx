@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { cn } from "./libs/utils";
+import Image from "next/image";
 
 import Menu, { type NavigationItem } from "./Menu";
 import Container from "./Container";
@@ -7,6 +8,7 @@ import Logo from "./Logo";
 
 interface HeaderProps {
   logo?: boolean;
+  defaultSvgLogo?: boolean;
   shortText?: string;
   longText?: string;
   center?: boolean;
@@ -16,7 +18,8 @@ interface HeaderProps {
 }
 
 export default function Header({
-  logo = true,
+  logo = false,
+  defaultSvgLogo = true,
   shortText = "Ameya",
   longText = "Ameya Naik",
   center = false,
@@ -54,14 +57,25 @@ export default function Header({
                 className
               )}
             >
-              {shortText && (
+              {defaultSvgLogo && (
+                <Image
+                  className="dark:invert"
+                  src="/logo.svg"
+                  alt="Ameya Naik Logo"
+                  width={180}
+                  height={20}
+                  priority
+                />
+              )}
+
+              {!defaultSvgLogo && shortText && (
                 <span
                   className={cn("block sm:hidden", center && "md:w-40 md:h-40")}
                 >
                   {shortText}
                 </span>
               )}
-              {longText && (
+              {!defaultSvgLogo && longText && (
                 <span
                   className={cn(
                     "hidden sm:block",

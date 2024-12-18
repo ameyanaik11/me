@@ -29,4 +29,6 @@ export const Twitter = (props: IconProps) => (
   </svg>
 );
 
-export default { Github, Twitter };
+const Icons = { Github, Twitter };
+
+export default Icons;
