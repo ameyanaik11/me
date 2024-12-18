@@ -59,7 +59,7 @@ export function FooterContent() {
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
-        <div className="w-full py-8 mx-auto">
+        <div className="w-full py-1 mx-auto">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="grid grid-cols-1 gap-8 xl:col-span-2">
               <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 md:gap-8">
@@ -95,8 +95,8 @@ export function FooterContent() {
             </div>
           </div>
 
-          <div className="pt-8 mt-8 sm:flex sm:items-center sm:justify-between">
-            <div className="mt-5">
+          <div className="pt-1 mt-1 sm:flex sm:items-center sm:justify-between">
+            <div className="mt-1">
               <p className="mt-4 text-xs text-gray-500 dark:text-[#888888]">
                 &copy; {new Date().getFullYear()} ameyanaik.com
               </p>
@@ -128,8 +128,8 @@ export default function Footer({
       <hr className="dark:border-neutral-700" />
       <div
         className={cn(
-          "mx-auto max-w-[90rem] py-12 flex justify-center md:justify-center text-black dark:text-white",
-          "pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]",
+          "mx-auto max-w-[90rem] py-2 flex justify-center md:justify-center text-black dark:text-white",
+          // "pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]",
           containerClassName
         )}
       >
